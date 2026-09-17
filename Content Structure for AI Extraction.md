@@ -114,7 +114,7 @@ Ahrefs' 2026 study of **1.4 million ChatGPT prompts** (Linehan, Apr 2026) found 
 - Pages with **natural-language URL slugs were cited 89.78% of the time** vs 81.11% for opaque URLs (e.g., `/best-website-builders-small-business` beats `/p/2847`)
 - Crucially: 67.8% of all uncited URLs are Reddit. Reddit gets retrieved heavily but cited only 1.93% of the time on ChatGPT -- the model pulls it into the candidate pool but rarely names it as the source
 
-**The practical lever:** Don't title pages for the head query alone. Title them for the *fan-out* -- the sub-queries ChatGPT generates from a head query (see [[How AI Search Actually Works]] for the RRF mechanics). A page titled "Best Website Builders" matches one query. A page titled "Best Website Builders for Small Business in 2026 — Webflow, Squarespace, Wix Compared" matches the actual fan-out cluster.
+**The practical lever:** Don't title pages for the head query alone. Title them for the *fan-out* -- the sub-queries ChatGPT generates from a head query (see [How AI Search Actually Works](<How AI Search Actually Works.md>) for the RRF mechanics). A page titled "Best Website Builders" matches one query. A page titled "Best Website Builders for Small Business in 2026 — Webflow, Squarespace, Wix Compared" matches the actual fan-out cluster.
 
 This connects to the title-as-citation-anchor pattern: AI models use the title both for retrieval (does this page belong in the candidate set?) and selection (which sentence do I pull and from which page?). A precise, fan-out-matching title earns both gates with one signal.
 
@@ -209,7 +209,7 @@ A critical finding from the Critchlow-Petrovic deep dive (DEJAN, 2025): when AI 
 
 Your beautiful page design is invisible to the model. Only text content and basic structural HTML matters for the selection gate.
 
-**But schema still matters -- just at a different gate.** Schema helps at the **retrieval gate**: crawlers and indexing systems use structured data to classify, discover, and prioritize your content. The `additional_info` field Google generates (see [[How AI Search Actually Works]]) may be influenced by schema. But the LLM that writes the final answer reads text, not schema.
+**But schema still matters -- just at a different gate.** Schema helps at the **retrieval gate**: crawlers and indexing systems use structured data to classify, discover, and prioritize your content. The `additional_info` field Google generates (see [How AI Search Actually Works](<How AI Search Actually Works.md>)) may be influenced by schema. But the LLM that writes the final answer reads text, not schema.
 
 **The practical takeaway:** Invest in schema for discoverability (retrieval gate). Invest in text quality and structure for citability (selection gate). Don't assume that adding schema will directly improve how the LLM presents your content -- it improves whether the LLM sees your content at all.
 

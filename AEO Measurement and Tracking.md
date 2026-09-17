@@ -50,7 +50,7 @@ These do not move together. Engines split asymmetrically on what they reward:
 A "ghost citation" — where your page is linked but your brand isn't named — accounts for 62% of all brand citations on average. Comparative and evaluative content drives mentions at ~30x the rate of pure informational content.
 
 These require different strategies to improve:
-- **Not retrieved?** Discoverability problem (crawlers, indexation, fan-out title match — see [[Content Structure for AI Extraction]])
+- **Not retrieved?** Discoverability problem (crawlers, indexation, fan-out title match — see [Content Structure for AI Extraction](<Content Structure for AI Extraction.md>))
 - **Retrieved but not mentioned?** Authority problem (Reddit-style — content is in the candidate pool but the model doesn't trust it enough to quote)
 - **Mentioned but not cited?** Off-site authority signal but no on-page anchor for the link (build cite-able evidence, digital PR)
 - **Cited but not recommended?** Selection problem (content structure, evidence density, competitor comparison)

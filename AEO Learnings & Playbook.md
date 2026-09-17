@@ -35,14 +35,14 @@
 
 | Note | What it covers |
 |------|---------------|
-| [[How AI Search Actually Works]] | Query fan-out, grounding, RAG, how LLMs decide when to retrieve vs answer from memory |
-| [[The GEO Evidence Base]] | Princeton study findings, proven optimization methods, what the data actually shows |
-| [[Platform Citation Mechanics]] | How ChatGPT, Google AI, Perplexity each discover and cite content differently |
-| [[Content Structure for AI Extraction]] | Grounding chunks, semantic compression, density > length, citable formatting |
-| [[Authority and Off-Site Presence]] | Brand mentions, YouTube, Reddit, review platforms, earned vs owned strategy |
-| [[AEO Measurement and Tracking]] | Share of voice, selection rate, tracking pitfalls, tool landscape |
-| [[Entity Optimization for AI]] | Entity mapping, schema patterns (`sameAs`, `mainEntityOfPage`), knowledge graph connection, cross-platform consistency |
-| [[Technical AI Accessibility]] | llms.txt spec, AI crawler taxonomy (training vs search bots), JS rendering gap, timeout behavior, WAF pitfalls |
+| [How AI Search Actually Works](<How AI Search Actually Works.md>) | Query fan-out, grounding, RAG, how LLMs decide when to retrieve vs answer from memory |
+| [The GEO Evidence Base](<The GEO Evidence Base.md>) | Princeton study findings, proven optimization methods, what the data actually shows |
+| [Platform Citation Mechanics](<Platform Citation Mechanics.md>) | How ChatGPT, Google AI, Perplexity each discover and cite content differently |
+| [Content Structure for AI Extraction](<Content Structure for AI Extraction.md>) | Grounding chunks, semantic compression, density > length, citable formatting |
+| [Authority and Off-Site Presence](<Authority and Off-Site Presence.md>) | Brand mentions, YouTube, Reddit, review platforms, earned vs owned strategy |
+| [AEO Measurement and Tracking](<AEO Measurement and Tracking.md>) | Share of voice, selection rate, tracking pitfalls, tool landscape |
+| [Entity Optimization for AI](<Entity Optimization for AI.md>) | Entity mapping, schema patterns (`sameAs`, `mainEntityOfPage`), knowledge graph connection, cross-platform consistency |
+| [Technical AI Accessibility](<Technical AI Accessibility.md>) | llms.txt spec, AI crawler taxonomy (training vs search bots), JS rendering gap, timeout behavior, WAF pitfalls |
 
 ---
 
@@ -84,7 +84,7 @@ The research backs this split. The Princeton GEO study shows on-site methods (st
 
 **You need both.** On-site gets your content into the candidate pool. Off-site gets AI to trust you enough to select you. The Webflow case study (Graphite) showed that combining both levers — on-site content optimization *plus* Reddit engagement *plus* YouTube presence — drove a 2x increase in LLM signups. Neither lever alone would have achieved that.
 
-See [[Authority and Off-Site Presence]] for the full deep dive on the off-site lever.
+See [Authority and Off-Site Presence](<Authority and Off-Site Presence.md>) for the full deep dive on the off-site lever.
 
 ### Head Questions vs Tail Questions
 Ethan Smith (Graphite) on [Lenny's Podcast](https://graphite.io/five-percent/the-ultimate-guide-to-aeo-on-lennys-podcast) distinguishes two types of questions you can target:
@@ -140,7 +140,7 @@ This matters at both gates. At the **retrieval gate**, AI uses entity graphs to 
 
 This connects directly to co-occurrence: when your brand entity appears consistently across multiple sources AI retrieves, that's entity co-occurrence with a clear identity attached. Without entity clarity, mentions are ambiguous. With it, every mention reinforces the same trusted identity.
 
-See [[Entity Optimization for AI]] for the full deep dive on entity mapping, schema patterns, and cross-platform consistency.
+See [Entity Optimization for AI](<Entity Optimization for AI.md>) for the full deep dive on entity mapping, schema patterns, and cross-platform consistency.
 
 ### Don't Over-Index on the Top 10 Domains
 The most-cited domain charts (Reddit, Wikipedia dominating a pie graph) are misleading. Reddit accounts for roughly 2.5% of all citations. Wikipedia is about 0.5%. The reason they look dominant is that charts only show the top 10 domains -- and 95% of cited domains are outside that top 10. The long tail of citation sources is enormous and varied.
@@ -176,7 +176,7 @@ The prediction (Ethan Smith calls this the "Convergence Thesis"): LLMs and tradi
 
 **Target queries where the model is forced to go looking.** That's where your content has a chance to be cited. On Gemini, that's nearly every query.
 
-See [[How AI Search Actually Works]] for the full deep dive.
+See [How AI Search Actually Works](<How AI Search Actually Works.md>) for the full deep dive.
 
 ### Filtering AEO Advice
 Most AEO information online is wrong -- either from bad analysis or from incentives that distort the message. When evaluating a source, consider what persona is speaking:
@@ -260,13 +260,13 @@ These are the checklists that build judgment over time. Come back to these every
 ### Before Publishing
 ```
 Technical
-- Schema markup present and entity-aware? (Article, FAQ, Organization, Person — with sameAs, mainEntityOfPage — see [[Entity Optimization for AI]])
-- AI search bots allowed in robots.txt? (OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot drive citations. Training bots like GPTBot are a separate decision — see [[Technical AI Accessibility]])
+- Schema markup present and entity-aware? (Article, FAQ, Organization, Person — with sameAs, mainEntityOfPage — see [Entity Optimization for AI](<Entity Optimization for AI.md>))
+- AI search bots allowed in robots.txt? (OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot drive citations. Training bots like GPTBot are a separate decision — see [Technical AI Accessibility](<Technical AI Accessibility.md>))
 - WAF/firewall rules checked? (Cloudflare/AWS bot protection can accidentally block AI crawlers)
 - Both Bing AND Google indexation verified? (ChatGPT's index source is debated -- partnership suggests Bing, but experiments show citation metadata matching Google's index. Verify both. Google's AI Mode uses a separate content store that lags behind the search index)
 - Page loads fast, renders server-side? (AI crawlers can't execute JS and timeout at 1-5 seconds — content must be in initial HTML)
 - Content survival-ready? (Only 32% of page content survives Google's pre-filter. Filler, promos, boilerplate get stripped before the LLM sees anything — front-load answers and cut noise)
-- llms.txt present at site root? (Emerging standard, low effort — see [[Technical AI Accessibility]])
+- llms.txt present at site root? (Emerging standard, low effort — see [Technical AI Accessibility](<Technical AI Accessibility.md>))
 
 Content
 - Real author bio with credentials present?
@@ -388,20 +388,20 @@ A suggested progression — start wherever feels right, revisit as the field evo
 ### Phase 1: Build the Foundation
 Understand what AEO is and why it matters.
 - [ ] Read Part 0 and Part 1 of this playbook
-- [ ] Read [[How AI Search Actually Works]]
-- [ ] Read [[The GEO Evidence Base]]
+- [ ] Read [How AI Search Actually Works](<How AI Search Actually Works.md>)
+- [ ] Read [The GEO Evidence Base](<The GEO Evidence Base.md>)
 - [ ] Read the Princeton GEO paper results section ([arXiv](https://arxiv.org/abs/2311.09735))
 
 ### Phase 2: Understand the Mechanics
 Zoom into how each platform works and what content structure gets cited.
-- [ ] Study [[Platform Citation Mechanics]]
-- [ ] Study [[Content Structure for AI Extraction]]
-- [ ] Study [[Authority and Off-Site Presence]]
+- [ ] Study [Platform Citation Mechanics](<Platform Citation Mechanics.md>)
+- [ ] Study [Content Structure for AI Extraction](<Content Structure for AI Extraction.md>)
+- [ ] Study [Authority and Off-Site Presence](<Authority and Off-Site Presence.md>)
 
 ### Phase 3: Build the Muscle (Ongoing)
 Judgment becomes instinct through repetition.
 - [ ] Apply Part 2 checklists to every piece of content you create
-- [ ] Study [[AEO Measurement and Tracking]]
+- [ ] Study [AEO Measurement and Tracking](<AEO Measurement and Tracking.md>)
 - [ ] Start the Practice Loop (Part 5)
 - [ ] After every content piece or optimization, log what you learned below
 
@@ -433,14 +433,14 @@ Judgment becomes instinct through repetition.
 - **62% of brand citations are "ghost"** — page linked but brand not named in the answer. Engine asymmetry: Gemini mentions 83.7% / cites 21.4%; ChatGPT cites 87% / mentions 20.7%. Same brand, opposite engine behavior. Single-engine tracking misses half the picture
 - Comparative/evaluative content drives mentions at ~30x the rate of pure informational content. Sharpens the existing "comparative listicles = 32.5% of citations" data point — comparison format wins on the *mention* axis specifically
 - Pairs with Ahrefs Apr 2026 (1.4M ChatGPT prompts): **Reddit is retrieved heavily but cited only 1.93%; 67.8% of all uncited URLs are Reddit.** Retrieval and citation are now confirmed as separate gates with measurable gaps between them. The playbook's "two gates" model (retrieval, selection) is now four levels: retrieval → mention → citation → recommendation
-- Folded into Principle #8 in Part 1, full table in [[AEO Measurement and Tracking]]
+- Folded into Principle #8 in Part 1, full table in [AEO Measurement and Tracking](<AEO Measurement and Tracking.md>)
 
 ### 2026-05-02 — [content] Title↔fanout cosine similarity is the strongest single citation predictor
 - Source: Ahrefs, ["Why ChatGPT Cites One Page Over Another"](https://ahrefs.com/blog/why-chatgpt-cites-pages/) (Linehan, Apr 2026) — 1.4M ChatGPT prompts
 - Title-to-fanout-query cosine similarity = **0.656 for cited pages vs 0.484 for uncited** — bigger lift than any authority or length signal in the study
 - Natural-language URL slugs cited **89.78% vs 81.11% for opaque slugs** (e.g., `/p/2847`). Tactical: slug your URLs in human language
 - 88.46% of citations come from the general search index. Pages cited by ChatGPT are real organic pages, not curated AI-specific sources. Reinforces the "Google indexation may matter more than Bing" finding from 2026-04-02
-- Don't title for the head query alone — title for the *fan-out cluster*. A page titled "Best Website Builders" matches one query; "Best Website Builders for Small Business in 2026 — Webflow, Squarespace, Wix Compared" matches the actual sub-query set. Sharpens [[Content Structure for AI Extraction]]
+- Don't title for the head query alone — title for the *fan-out cluster*. A page titled "Best Website Builders" matches one query; "Best Website Builders for Small Business in 2026 — Webflow, Squarespace, Wix Compared" matches the actual sub-query set. Sharpens [Content Structure for AI Extraction](<Content Structure for AI Extraction.md>)
 
 ### 2026-05-02 — [content] Shorter focused content wins on ChatGPT; structural-only edits drive +17% citation
 - Source: Indig, ["Shorter, Focused Content Wins in ChatGPT"](https://www.growth-memo.com/p/shorter-focused-content-wins-in-chatgpt) (Apr 2026) — 815k query-page pairs, 16,851 queries, 353,799 pages, 10 industries
@@ -456,7 +456,7 @@ Judgment becomes instinct through repetition.
 - YouTube grew **+34% in 6 months** and is now **AIO's #1 cited domain** (overtook Reddit/LinkedIn balance)
 - Source: Seer, ["Google AI Overviews CTR Recovery"](https://searchengineland.com/google-ai-overviews-ctr-recovery-study-475566) (Apr 2026, n=53 brands, 5.47M queries, 2.43B impressions)
 - AIO CTR rose from 1.3% (Dec 2025) to **2.4% (Feb 2026), +85% in two months.** The late-2025 "AIO is killing clicks" panic was a snapshot of the trough; channel recovered. AIO present in **~95% of comparison queries, ~5% of transactional**
-- Updated Pitfall 7 in [[AEO Measurement and Tracking]] to reflect the corrected state
+- Updated Pitfall 7 in [AEO Measurement and Tracking](<AEO Measurement and Tracking.md>) to reflect the corrected state
 
 ### 2026-05-02 — [platform] ChatGPT search trigger dropped to 34.5%; query uniqueness 91% across runs
 - Source: Semrush, ["ChatGPT Search Insights"](https://www.semrush.com/blog/chatgpt-search-insights/) — 17-month update (Oct 2024 → Feb 2026), Apr 2026
@@ -471,7 +471,7 @@ Judgment becomes instinct through repetition.
 - At **n=10 runs per prompt per platform**: mean visibility error 5.6%, position error 1.06; **98.6% of prompts hit ≤10% error**. Replaces the playbook's vague "10-20 runs" with a defensible number
 - **Sequential sampling cuts samples 59% on average** (135 → 55) for a 95% CI width ≤2.0. Run a pilot batch of 10, expand only for prompts where the CI is still wide (typically broad/head queries with 30-49% category consistency)
 - **Visibility first, then position.** Visibility is more stable than rank order across runs. Track visibility as the primary metric and position as the secondary. Transactional prompts stabilize faster than subjective ones
-- Updated [[AEO Measurement and Tracking]] core-metrics section with the sequential protocol
+- Updated [AEO Measurement and Tracking](<AEO Measurement and Tracking.md>) core-metrics section with the sequential protocol
 
 ### 2026-05-02 — [authority] CC Rank as the upstream signal; Gemma 4 shows model-level brand-authority drift
 - Source: Metehan Yesilyurt, ["The Hidden Authority Signal"](https://metehan.ai/blog/cc-rank/) (Jan 2026) — logistic regression over 607M Common Crawl domains, 2023-2025
@@ -482,7 +482,7 @@ Judgment becomes instinct through repetition.
 
 ### 2026-05-02 — [technical] llms.txt downgraded; agent-discovery files emerging as separate surface
 - Source: AEO Engine measurement (2026) — **84 of 62,100 AI-bot requests over 90 days hit `/llms.txt` — 0.1%.** No frontier lab (OpenAI, Google, Anthropic, Meta, Mistral) has confirmed inference-time parsing
-- Reframed [[Technical AI Accessibility]] llms.txt section: it's an **agent/IDE convenience file** (Cursor, Windsurf, coding agents), not a search-time inference signal. After 18 months of the spec existing, the trajectory hasn't materialized. Still cheap to add for docs sites; deprioritize for marketing sites
+- Reframed [Technical AI Accessibility](<Technical AI Accessibility.md>) llms.txt section: it's an **agent/IDE convenience file** (Cursor, Windsurf, coding agents), not a search-time inference signal. After 18 months of the spec existing, the trajectory hasn't materialized. Still cheap to add for docs sites; deprioritize for marketing sites
 - Source: Addy Osmani, ["Agentic Engine Optimization"](https://searchengineland.com/agentic-engine-optimization-google-ai-director-474358) (Apr 2026)
 - New emerging file conventions for AI agents: **`AGENTS.md`** (capabilities, constraints, tool calls), **`skill.md`** (reusable workflows), and clean `.md` versions of HTML pages. Mueller has pushed back on requiring separate-markdown for *search* indexing — these are agent-traffic optimization, not AEO
 - AI-driven docs traffic grew **5x YoY in 2025** and is now **41% of pageviews on docs sites** (GitBook). For developer/agent audiences, agent-side optimization may compound faster than human-side AEO
@@ -490,7 +490,7 @@ Judgment becomes instinct through repetition.
 ### 2026-05-02 — [measurement] ChatGPT Ads now in ~20% of US responses
 - Source: LLMrefs (Apr 2026) — 682K ChatGPT answers tracked since Feb 2026
 - **~20% of US ChatGPT responses now contain ad placements.** Brands "winning" AI visibility may increasingly be paying for it; trackers that conflate organic citations with ad-adjacent appearances will mislead
-- Tag ad-adjacent appearances separately. Watch for share-of-voice jumps that correlate with platform ad-product launches — that's a signal to dig in, not celebrate. Added as Pitfall 9 in [[AEO Measurement and Tracking]]
+- Tag ad-adjacent appearances separately. Watch for share-of-voice jumps that correlate with platform ad-product launches — that's a signal to dig in, not celebrate. Added as Pitfall 9 in [AEO Measurement and Tracking](<AEO Measurement and Tracking.md>)
 
 ### 2026-04-19 — [content] Growth Memo attention study — paragraph-middle bias, H2-as-prompt, entity-density and reading-level benchmarks
 - Source: Kevin Indig, Growth Memo, ["The Science of How AI Pays Attention"](https://www.growth-memo.com/p/the-science-of-how-ai-pays-attention) — ChatGPT citation analysis with randomized validation batches (P=0.0). ChatGPT-only, single study, no cross-platform validation

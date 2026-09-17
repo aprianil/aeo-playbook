@@ -53,7 +53,7 @@ The top quartile earns **10x more AI mentions** than the next quartile. If your 
 
 Before AI systems decide whether to cite your domain, they're working from a corpus that's already been filtered. Metehan Yesilyurt's "CC Rank" research (Jan 2026, logistic regression over 607M Common Crawl domains 2023-2025) found that domains scoring high on **Common Crawl Harmonic Centrality + PageRank** are dramatically overrepresented in LLM citations across platforms. This is the upstream-of-everything authority signal: AI systems can only cite what's in their training/retrieval corpus, and Common Crawl is the dominant source.
 
-The Perplexity hardcoded trusted-domain list (GitHub, Reddit, Stack Overflow, .edu, Amazon — see [[Platform Citation Mechanics]]) is a curated, model-specific version of this same idea. CC Rank is the measurable upstream version that applies broadly.
+The Perplexity hardcoded trusted-domain list (GitHub, Reddit, Stack Overflow, .edu, Amazon — see [Platform Citation Mechanics](<Platform Citation Mechanics.md>)) is a curated, model-specific version of this same idea. CC Rank is the measurable upstream version that applies broadly.
 
 **Practical implication:** Domains with high CC Rank get a structural advantage that no on-page optimization can replicate. For new or low-CC-Rank brands, the path is the same as the Ahrefs visibility cliff — earn mentions on already-trusted domains rather than trying to lift your own domain into the trusted set. Free tool: `webgraph.metehan.ai`.
 

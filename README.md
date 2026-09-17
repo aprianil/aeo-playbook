@@ -29,7 +29,7 @@ I'm still learning this. It grows as I do.
 
 ## how it's built
 
-These are my actual Obsidian notes, synced to GitHub. If you use Obsidian, clone this repo into your vault and the `[[links]]` just work. Flat structure, no subfolders. The playbook is the root note that links out to everything else.
+These are my actual Obsidian notes, synced to GitHub. Cross-links are plain markdown, so they're clickable here and still work if you clone the repo into an Obsidian vault. Flat structure, no subfolders. The playbook is the root note that links out to everything else.
 
 There's a sister repo for the engineering side: [engineering-playbook](https://github.com/aprianil/engineering-playbook).
 

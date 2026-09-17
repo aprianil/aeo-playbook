@@ -39,7 +39,7 @@ ChatGPT favors **authoritative knowledge bases and established editorial sources
 - Pages rich in statistics (19+ data points) average 5.4 citations vs 2.8
 
 ### Under the Hood (Metehan Yesilyurt, 2025)
-- **Ranking mechanism: Reciprocal Rank Fusion (RRF) with k=60.** ChatGPT fires 8-16 parallel sub-queries per user prompt and merges results. Consistency across many queries beats ranking #1 for one query by 46x (see [[How AI Search Actually Works]] for the math)
+- **Ranking mechanism: Reciprocal Rank Fusion (RRF) with k=60.** ChatGPT fires 8-16 parallel sub-queries per user prompt and merges results. Consistency across many queries beats ranking #1 for one query by 46x (see [How AI Search Actually Works](<How AI Search Actually Works.md>) for the math)
 - **Recency bias is deliberate:** `use_freshness_scoring_profile: true` in production code. Up to 25% of relevance decisions flip based on dates alone (Waseda University research)
 - **Personal memory distorts results:** ChatGPT injects topics from a user's conversation history into new responses. Two users asking identical questions get different brand mentions. AEO tracking tools see personalized results unless using fresh/logged-out sessions
 - **Citations track Google's index, not Bing's.** Despite common assumptions, Metehan's experiment showed ChatGPT citation metadata matched Google's indexed versions. Google indexation may matter more than Bing for ChatGPT visibility
